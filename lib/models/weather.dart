@@ -26,6 +26,6 @@ WeatherModel setWeather(response) {
     tempC: response['current']['temp_c'],
     lastUpdated: response['current']['last_updated'],
     text: response['current']['condition']['text'],
-    icon: response['current']['condition']['icon'],
+    icon: response['current']['condition']['icon'].replaceAll('//', 'https://'),
   );
 }
